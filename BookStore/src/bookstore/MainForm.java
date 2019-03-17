@@ -113,6 +113,7 @@ public class MainForm extends javax.swing.JFrame {
 
     private void editAuthorButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editAuthorButtonActionPerformed
         // TODO add your handling code here:
+        this.bookstore.editAuthor();
     }//GEN-LAST:event_editAuthorButtonActionPerformed
 
     private void linkTitleAuthorButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_linkTitleAuthorButtonActionPerformed

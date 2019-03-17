@@ -61,6 +61,7 @@ public class BookStore {
             System.out.println(ex.getMessage());
             Logger.getLogger(BookStore.class.getName()).log(Level.SEVERE, null, ex);
         }
+        popup("Successfully inserted new Author");
         //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -70,6 +71,11 @@ public class BookStore {
 
     void popup(String message) {
         JOptionPane.showMessageDialog(null, message);
+    }
+
+    void editAuthor() {
+        String id = input("Which Author are you editing? (Please enter AuthorID)");
+        //To change body of generated methods, choose Tools | Templates.
     }
 
 }
