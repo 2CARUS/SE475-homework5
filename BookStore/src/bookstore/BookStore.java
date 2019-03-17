@@ -52,7 +52,7 @@ public class BookStore {
         String lastName = input("What is the author's last name?");
 
         String sql = "INSERT INTO AUTHOR(AuthorID,FirstName,LastName) VALUES(?,?,?)";
-        try ( PreparedStatement prepared = this.connection.prepareStatement(sql)) {
+        try ( PreparedStatement prepared = this.prepSQL(sql)) {
             prepared.setString(1, AuthorID);
             prepared.setString(2, firstName);
             prepared.setString(3, lastName);
@@ -75,7 +75,28 @@ public class BookStore {
 
     void editAuthor() {
         String id = input("Which Author are you editing? (Please enter AuthorID)");
+        // make sure author ID is valid
+        // if it is valid, continue with modifications
+        String sql = "Select * from Author where AuthorID = ?";
+
+        try ( PreparedStatement prepared = this.prepSQL(sql)) {
+
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+            Logger.getLogger(BookStore.class.getName()).log(Level.SEVERE, null, ex);
+        }
         //To change body of generated methods, choose Tools | Templates.
+    }
+
+    PreparedStatement prepSQL(String sql) {
+        PreparedStatement prepared = null;
+        try {
+            prepared = this.connection.prepareStatement(sql);
+        } catch (SQLException ex) {
+            Logger.getLogger(BookStore.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        return prepared;
     }
 
 }
