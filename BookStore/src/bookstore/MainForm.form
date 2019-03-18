@@ -73,7 +73,7 @@
     </Component>
     <Component class="javax.swing.JButton" name="linkTitleAuthorButton">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Link existing Title to Existing Author"/>
+        <Property name="text" type="java.lang.String" value="Link Existing Title to Existing Author"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="linkTitleAuthorButtonActionPerformed"/>

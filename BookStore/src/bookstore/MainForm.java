@@ -52,7 +52,7 @@ public class MainForm extends javax.swing.JFrame {
             }
         });
 
-        linkTitleAuthorButton.setText("Link existing Title to Existing Author");
+        linkTitleAuthorButton.setText("Link Existing Title to Existing Author");
         linkTitleAuthorButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 linkTitleAuthorButtonActionPerformed(evt);
@@ -118,6 +118,7 @@ public class MainForm extends javax.swing.JFrame {
 
     private void linkTitleAuthorButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_linkTitleAuthorButtonActionPerformed
         // TODO add your handling code here:
+        this.bookstore.linkBookAuthor();
     }//GEN-LAST:event_linkTitleAuthorButtonActionPerformed
 
     private void newTitleButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newTitleButtonActionPerformed
